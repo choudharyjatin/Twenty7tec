@@ -1,0 +1,444 @@
+{
+	"info": {
+		"_postman_id": "5cbea181-6e21-4817-ae36-e4e389356986",
+		"name": "cities",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "London",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"let responseData=pm.response.json();",
+							"if(responseData.name === \"London\"){",
+							"\tpm.test(\"Correct information, test passed\");",
+							"\tpm.test(\"City: \" + responseData.name + \", \" + responseData.sys.country);",
+							"    pm.test(\"Current Temperature: \" + responseData.main.temp + \" degree Celcius\");",
+							"\tpm.test(\"Humidity: \" + responseData.main.humidity + \"%\");",
+							"\tpm.test(\"Description: \" + responseData.weather[0].description);",
+							"    pm.test(\"Minimum Temperature: \" + responseData.main.temp_min + \" degree Celcius\");",
+							"    pm.test(\"Maximum Temperature: \" + responseData.main.temp_max + \" degree Celcius\");",
+							"}",
+							"else{",
+							"\tpm.test(\"Incorrect information, test failed\");",
+							"   pm.test(\"City: \" + responseData.name + \", \" + responseData.sys.country);",
+							"    pm.test(\"Current Temperature: \" + responseData.main.temp + \" degree Celcius\");",
+							"\tpm.test(\"Humidity: \" + responseData.main.humidity + \"%\");",
+							"\tpm.test(\"Description: \" + responseData.weather[0].description);",
+							"    pm.test(\"Minimum Temperature: \" + responseData.main.temp_min + \" degree Celcius\");",
+							"    pm.test(\"Maximum Temperature: \" + responseData.main.temp_max + \" degree Celcius\");",
+							"} ",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?id=2643743&appid=9d50450a48809637b4862bdcb125927d&units=metric&lang=en",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2643743"
+						},
+						{
+							"key": "appid",
+							"value": "9d50450a48809637b4862bdcb125927d"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						},
+						{
+							"key": "lang",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paris",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"let responseData=pm.response.json();",
+							"if(responseData.name === \"Paris\"){",
+							"\tpm.test(\"Correct information, test passed\");",
+							"\tpm.test(\"City: \" + responseData.name + \", \" + responseData.sys.country);",
+							"    pm.test(\"Current Temperature: \" + responseData.main.temp + \" degree Celcius\");",
+							"\tpm.test(\"Humidity: \" + responseData.main.humidity + \"%\");",
+							"\tpm.test(\"Description: \" + responseData.weather[0].description);",
+							"    pm.test(\"Minimum Temperature: \" + responseData.main.temp_min + \" degree Celcius\");",
+							"    pm.test(\"Maximum Temperature: \" + responseData.main.temp_max + \" degree Celcius\");",
+							"}",
+							"else{",
+							"\tpm.test(\"Incorrect information, test failed\");",
+							"   pm.test(\"City: \" + responseData.name + \", \" + responseData.sys.country);",
+							"    pm.test(\"Current Temperature: \" + responseData.main.temp + \" degree Celcius\");",
+							"\tpm.test(\"Humidity: \" + responseData.main.humidity + \"%\");",
+							"\tpm.test(\"Description: \" + responseData.weather[0].description);",
+							"    pm.test(\"Minimum Temperature: \" + responseData.main.temp_min + \" degree Celcius\");",
+							"    pm.test(\"Maximum Temperature: \" + responseData.main.temp_max + \" degree Celcius\");",
+							"} ",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?id=2988507&appid=9d50450a48809637b4862bdcb125927d&units=metric&lang=fr",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2988507"
+						},
+						{
+							"key": "appid",
+							"value": "9d50450a48809637b4862bdcb125927d"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						},
+						{
+							"key": "lang",
+							"value": "fr"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New York",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"let responseData=pm.response.json();",
+							"if(responseData.name === \"New York\"){",
+							"\tpm.test(\"Correct information, test passed\");",
+							"\tpm.test(\"City: \" + responseData.name + \", \" + responseData.sys.country);",
+							"    pm.test(\"Current Temperature: \" + responseData.main.temp + \" degree Celcius\");",
+							"\tpm.test(\"Humidity: \" + responseData.main.humidity + \"%\");",
+							"\tpm.test(\"Description: \" + responseData.weather[0].description);",
+							"    pm.test(\"Minimum Temperature: \" + responseData.main.temp_min + \" degree Celcius\");",
+							"    pm.test(\"Maximum Temperature: \" + responseData.main.temp_max + \" degree Celcius\");",
+							"}",
+							"else{",
+							"\tpm.test(\"Incorrect information, test failed\");",
+							"   pm.test(\"City: \" + responseData.name + \", \" + responseData.sys.country);",
+							"    pm.test(\"Current Temperature: \" + responseData.main.temp + \" degree Celcius\");",
+							"\tpm.test(\"Humidity: \" + responseData.main.humidity + \"%\");",
+							"\tpm.test(\"Description: \" + responseData.weather[0].description);",
+							"    pm.test(\"Minimum Temperature: \" + responseData.main.temp_min + \" degree Celcius\");",
+							"    pm.test(\"Maximum Temperature: \" + responseData.main.temp_max + \" degree Celcius\");",
+							"} ",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?id=5128581&appid=9d50450a48809637b4862bdcb125927d&units=metric&lang=en",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5128581"
+						},
+						{
+							"key": "appid",
+							"value": "9d50450a48809637b4862bdcb125927d"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						},
+						{
+							"key": "lang",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delhi",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"let responseData=pm.response.json();",
+							"if(responseData.name === \"दिल्ली\"){",
+							"\tpm.test(\"Correct information, test passed\");",
+							"\tpm.test(\"City: \" + responseData.name + \", \" + responseData.sys.country);",
+							"    pm.test(\"Current Temperature: \" + responseData.main.temp + \" degree Celcius\");",
+							"\tpm.test(\"Humidity: \" + responseData.main.humidity + \"%\");",
+							"\tpm.test(\"Description: \" + responseData.weather[0].description);",
+							"    pm.test(\"Minimum Temperature: \" + responseData.main.temp_min + \" degree Celcius\");",
+							"    pm.test(\"Maximum Temperature: \" + responseData.main.temp_max + \" degree Celcius\");",
+							"}",
+							"else{",
+							"\tpm.test(\"Incorrect information, test failed\");",
+							"   pm.test(\"City: \" + responseData.name + \", \" + responseData.sys.country);",
+							"    pm.test(\"Current Temperature: \" + responseData.main.temp + \" degree Celcius\");",
+							"\tpm.test(\"Humidity: \" + responseData.main.humidity + \"%\");",
+							"\tpm.test(\"Description: \" + responseData.weather[0].description);",
+							"    pm.test(\"Minimum Temperature: \" + responseData.main.temp_min + \" degree Celcius\");",
+							"    pm.test(\"Maximum Temperature: \" + responseData.main.temp_max + \" degree Celcius\");",
+							"} ",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?id=1273294&appid=9d50450a48809637b4862bdcb125927d&units=metric&lang=hi",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1273294"
+						},
+						{
+							"key": "appid",
+							"value": "9d50450a48809637b4862bdcb125927d"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						},
+						{
+							"key": "lang",
+							"value": "hi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tokyo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"let responseData=pm.response.json();",
+							"if(responseData.name === \"東京都\"){",
+							"\tpm.test(\"Correct information, test passed\");",
+							"\tpm.test(\"City: \" + responseData.name + \", \" + responseData.sys.country);",
+							"    pm.test(\"Current Temperature: \" + responseData.main.temp + \" degree Celcius\");",
+							"\tpm.test(\"Humidity: \" + responseData.main.humidity + \"%\");",
+							"\tpm.test(\"Description: \" + responseData.weather[0].description);",
+							"    pm.test(\"Minimum Temperature: \" + responseData.main.temp_min + \" degree Celcius\");",
+							"    pm.test(\"Maximum Temperature: \" + responseData.main.temp_max + \" degree Celcius\");",
+							"}",
+							"else{",
+							"\tpm.test(\"Incorrect information, test failed\");",
+							"   pm.test(\"City: \" + responseData.name + \", \" + responseData.sys.country);",
+							"    pm.test(\"Current Temperature: \" + responseData.main.temp + \" degree Celcius\");",
+							"\tpm.test(\"Humidity: \" + responseData.main.humidity + \"%\");",
+							"\tpm.test(\"Description: \" + responseData.weather[0].description);",
+							"    pm.test(\"Minimum Temperature: \" + responseData.main.temp_min + \" degree Celcius\");",
+							"    pm.test(\"Maximum Temperature: \" + responseData.main.temp_max + \" degree Celcius\");",
+							"",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?id=1850147&appid=9d50450a48809637b4862bdcb125927d&units=metric&lang=ja",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1850147"
+						},
+						{
+							"key": "appid",
+							"value": "9d50450a48809637b4862bdcb125927d"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						},
+						{
+							"key": "lang",
+							"value": "ja"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
